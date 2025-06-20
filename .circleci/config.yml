@@ -20,7 +20,7 @@ jobs:
       - run:
           name: Run Cypress tests with Xvfb
           command: |
-            npx xvfb-run -a npm run test:cypress
+            xvfb-run -a npm run test:cypress
       - store_test_results:
           path: cypress/results
 
