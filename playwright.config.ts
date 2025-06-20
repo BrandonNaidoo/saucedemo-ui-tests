@@ -6,7 +6,7 @@ export default defineConfig({
   retries: 0,
   use: {
     baseURL: 'https://www.saucedemo.com',
-    headless: false,
+    headless: true,
     viewport: { width: 1280, height: 720 },
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',

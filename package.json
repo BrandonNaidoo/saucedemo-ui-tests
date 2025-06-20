@@ -5,8 +5,8 @@
   "scripts": {
     "test:cypress": "npx cypress run --browser chrome",
     "test:open": "npx cypress open --browser chrome",
-    "test:playwright": "npx playwright test",
-    "test:playwright:ci": "npx playwright test --headless"
+    "test:playwright": "npx playwright test --headed",
+    "test:playwright:ci": "npx playwright test"
   },
   "keywords": [
     "cypress",
