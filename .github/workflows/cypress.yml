@@ -2,7 +2,8 @@ name: Run Cypress Tests
 
 on:
   push:
-    branches: [main]
+    branches:
+      - '*'
   pull_request:
     branches: [main]
   schedule:
@@ -27,4 +28,4 @@ jobs:
       - name: Run Cypress tests
         run: npm test:cypress
         env:
-          CYPRESS_baseUrl: 'https://www.saucedemo.com' # or your test URL
+          CYPRESS_baseUrl: 'https://www.saucedemo.com'
