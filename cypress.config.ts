@@ -1,9 +1,12 @@
 import { defineConfig } from 'cypress';
+import webpackPreprocessor from '@cypress/webpack-preprocessor';
+
+const webpackOptions = require('./webpack.config');
 
 export default defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
+    setupNodeEvents(on) {
+      on('file:preprocessor', webpackPreprocessor({ webpackOptions }));
     },
     baseUrl: 'https://www.saucedemo.com/',
     supportFile: 'cypress/support/e2e.ts',
