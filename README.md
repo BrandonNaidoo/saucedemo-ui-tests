@@ -71,9 +71,7 @@ Make sure to install the corresponding VS Code extensions for automatic linting 
 
 ## ⚙️ Continuous Integration
 
-Planned features:
-
-- **GitHub Actions** for running tests
+- **GitHub Actions** configured to run Cypress tests on push, pull request, and scheduled monthly
 
 ---
 
