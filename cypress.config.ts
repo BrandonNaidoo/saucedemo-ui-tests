@@ -9,7 +9,7 @@ export default defineConfig({
       on('file:preprocessor', webpackPreprocessor({ webpackOptions }));
     },
     baseUrl: 'https://www.saucedemo.com/',
-    supportFile: 'cypress/support/e2e.ts',
+    supportFile: false,
     env: {
       users: {
         standard_user: { username: 'standard_user', password: 'secret_sauce' },
