@@ -13,8 +13,12 @@ jobs:
       - checkout
       - run: npm ci
       - run:
-          name: Run Cypress tests
-          command: npm run test:cypress
+          name: Install Xvfb
+          command: sudo apt-get update && sudo apt-get install -y xvfb
+      - run:
+          name: Run Cypress tests with Xvfb
+          command: |
+            npx xvfb-run -a npm run test:cypress
       - store_test_results:
           path: cypress/results
 
