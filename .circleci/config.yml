@@ -1,31 +1,30 @@
 version: 2.1
 
 executors:
-  node:
+  cypress:
     docker:
-      - image: cimg/node:lts
+      - image: cypress/included:14.5.0
+    working_directory: ~/repo
+
+  playwright:
+    docker:
+      - image: mcr.microsoft.com/playwright:focal
     working_directory: ~/repo
 
 jobs:
   cypress-tests:
-    executor: node
+    executor: cypress
     steps:
       - checkout
       - run: npm ci
       - run:
-          name: Install Xvfb
-          command: |
-            sudo apt-get update
-            sudo apt-get install -y xvfb
-      - run:
-          name: Run Cypress tests with Xvfb
-          command: |
-            xvfb-run -a npm run test:cypress
+          name: Run Cypress tests
+          command: npm run test:cypress
       - store_test_results:
           path: cypress/results
 
   playwright-tests:
-    executor: node
+    executor: playwright
     steps:
       - checkout
       - run: npm ci
