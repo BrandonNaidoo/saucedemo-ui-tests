@@ -26,6 +26,6 @@ jobs:
         run: npm ci
 
       - name: Run Cypress tests
-        run: npm test:cypress
+        run: npm run test:cypress
         env:
           CYPRESS_baseUrl: 'https://www.saucedemo.com'
