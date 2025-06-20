@@ -25,6 +25,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: List Cypress e2e files
+        run: ls -R cypress/e2e
+
       - name: Run Cypress tests
         run: npm run test:cypress
         env:

@@ -10,6 +10,7 @@ export default defineConfig({
     },
     baseUrl: 'https://www.saucedemo.com/',
     supportFile: false,
+    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     env: {
       users: {
         standard_user: { username: 'standard_user', password: 'secret_sauce' },
