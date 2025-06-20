@@ -1,36 +1,44 @@
 version: 2.1
 
-jobs:
-  cypress-run:
+executors:
+  cypress:
     docker:
-      - image: cypress/base:14.5.0
+      - image: cypress/included:14.5.0
+    working_directory: ~/repo
+
+  playwright:
+    docker:
+      - image: mcr.microsoft.com/playwright:focal
+    working_directory: ~/repo
+
+jobs:
+  cypress-tests:
+    executor: cypress
     steps:
       - checkout
-      - run:
-          name: Setup Node.js (use preinstalled from image)
-          command: node -v
-      - run:
-          name: Install dependencies
-          command: npm ci
+      - run: npm ci
       - run:
           name: Run Cypress tests
           command: npm run test:cypress
-          environment:
-            CYPRESS_baseUrl: 'https://www.saucedemo.com'
+      - store_test_results:
+          path: cypress/results
+
+  playwright-tests:
+    executor: playwright
+    steps:
+      - checkout
+      - run: npm ci
+      - run:
+          name: Install Playwright browsers
+          command: npx playwright install --with-deps
+      - run:
+          name: Run Playwright tests
+          command: npm run test:playwright:ci
+      - store_test_results:
+          path: test-results
 
 workflows:
-  version: 2
-  cypress-tests:
-    triggers:
-      - schedule:
-          cron: '0 0 1 * *'
-          filters:
-            branches:
-              only:
-                - main
+  run-tests:
     jobs:
-      - cypress-run:
-          filters:
-            branches:
-              only:
-                - main
+      - cypress-tests
+      - playwright-tests

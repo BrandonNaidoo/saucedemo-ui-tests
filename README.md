@@ -37,10 +37,32 @@ npm install
 
 ## 🚀 Running Tests
 
-### ✅ Run Cypress Tests
+### 🧪 Cypress
+
+- Run Cypress tests in headless mode (default for CI):
 
 ```bash
 npm run test:cypress
+```
+
+- Open Cypress Test Runner (headed mode for local development):
+
+```bash
+npm run test:open
+```
+
+### 🎭 Playwright
+
+- Run Playwright tests in headed mode (default for local dev):
+
+```bash
+npm run test:playwright
+```
+
+- Run Playwright tests in headless mode (recommended for CI):
+
+```bash
+npm run test:playwright:ci
 ```
 
 ---
