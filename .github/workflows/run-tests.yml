@@ -1,4 +1,4 @@
-name: Run Cypress Tests
+name: Run UI Tests
 
 on:
   push:
@@ -10,9 +10,8 @@ on:
     - cron: '0 0 1 * *'
 
 jobs:
-  cypress-run:
+  cypress:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -29,3 +28,22 @@ jobs:
         run: npm run test:cypress
         env:
           CYPRESS_baseUrl: 'https://www.saucedemo.com'
+
+  playwright:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Playwright tests
+        run: npm run test:playwright:ci
+        env:
+          BASE_URL: 'https://www.saucedemo.com'
