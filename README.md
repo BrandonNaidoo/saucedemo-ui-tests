@@ -2,6 +2,11 @@
 
 Automated UI tests for the SauceDemo application using Cypress and Playwright, with CI pipeline integration for continuous test execution and reporting.
 
+## Build Status
+
+[![GitHub Workflow Status](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/ci.yml)
+[![CircleCI](https://circleci.com/gh/BrandonNaidoo/saucedemo-ui-tests.svg?style=svg)](https://circleci.com/gh/BrandonNaidoo/saucedemo-ui-tests)
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
