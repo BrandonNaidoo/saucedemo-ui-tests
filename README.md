@@ -4,9 +4,11 @@ Automated UI tests for the SauceDemo application using Cypress and Playwright, w
 
 ## Build Status
 
-[![GitHub Workflow Status](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/run-tests.yml/badge.svg)](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/run-tests.yml)
-[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BrandonNaidoo_saucedemo-ui-tests&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BrandonNaidoo_saucedemo-ui-tests)
+| Service        | Status                                                                                                                                                                                                                                                 |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **GitHub**     | [![GitHub Workflow Status](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/run-tests.yml/badge.svg)](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/run-tests.yml)                                        |
+| **CircleCI**   | [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main) |
+| **SonarCloud** | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BrandonNaidoo_saucedemo-ui-tests&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BrandonNaidoo_saucedemo-ui-tests)                                    |
 
 ## Table of Contents
 
