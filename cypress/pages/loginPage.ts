@@ -1,12 +1,12 @@
 import { Role } from '../enums/role';
 
 class LoginPage {
-  private usernameInput = '[data-test="username"]';
-  private passwordInput = '[data-test="password"]';
-  private loginButton = '[data-test="login-button"]';
-  private loginLogo = '.login_logo';
-  private errorMessageContainer = '.error-message-container';
-  private errorMessageHeader = '[data-test="error"]';
+  private readonly usernameInput = '[data-test="username"]';
+  private readonly passwordInput = '[data-test="password"]';
+  private readonly loginButton = '[data-test="login-button"]';
+  private readonly loginLogo = '.login_logo';
+  private readonly errorMessageContainer = '.error-message-container';
+  private readonly errorMessageHeader = '[data-test="error"]';
 
   public getLoginLogo(): Cypress.Chainable<JQuery<HTMLElement>> {
     return cy.get(this.loginLogo);
