@@ -6,6 +6,7 @@ Automated UI tests for the SauceDemo application using Cypress and Playwright, w
 
 [![GitHub Workflow Status](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/ci.yml)
 [![CircleCI](https://circleci.com/gh/BrandonNaidoo/saucedemo-ui-tests.svg?style=svg)](https://circleci.com/gh/BrandonNaidoo/saucedemo-ui-tests)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=brandonnaidoo&metric=alert_status)](https://sonarcloud.io/dashboard?id=brandonnaidoo)
 
 ## Table of Contents
 
