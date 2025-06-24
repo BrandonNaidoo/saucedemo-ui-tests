@@ -4,9 +4,9 @@ Automated UI tests for the SauceDemo application using Cypress and Playwright, w
 
 ## Build Status
 
-[![GitHub Workflow Status](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/ci.yml)
-[![CircleCI](https://circleci.com/gh/BrandonNaidoo/saucedemo-ui-tests.svg?style=svg)](https://circleci.com/gh/BrandonNaidoo/saucedemo-ui-tests)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=brandonnaidoo&metric=alert_status)](https://sonarcloud.io/dashboard?id=brandonnaidoo)
+[![GitHub Workflow Status](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/run-tests.yml/badge.svg)](https://github.com/BrandonNaidoo/saucedemo-ui-tests/actions/workflows/run-tests.yml)
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BrandonNaidoo_saucedemo-ui-tests&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BrandonNaidoo_saucedemo-ui-tests)
 
 ## Table of Contents
 
