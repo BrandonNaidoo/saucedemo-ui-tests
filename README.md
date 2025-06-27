@@ -10,6 +10,14 @@ Automated UI tests for the SauceDemo application using Cypress and Playwright, w
 | **CircleCI**   | [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main) |
 | **SonarCloud** | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BrandonNaidoo_saucedemo-ui-tests&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BrandonNaidoo_saucedemo-ui-tests)                                    |
 
+---
+
+## 🔐 OWASP ZAP Security Scans
+
+OWASP ZAP is integrated into the GitHub Actions workflow to perform automated security scans against [saucedemo.com](https://www.saucedemo.com). Results are generated with each pipeline run to help identify common web vulnerabilities.
+
+---
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)

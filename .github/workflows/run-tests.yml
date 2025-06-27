@@ -10,6 +10,9 @@ on:
     - cron: '0 0 1 * *'
   workflow_dispatch:
 
+env:
+  BASE_URL: ${{ vars.BASE_URL }}
+
 jobs:
   cypress:
     runs-on: ubuntu-latest
@@ -28,7 +31,7 @@ jobs:
       - name: Run Cypress tests
         run: npm run test:cypress
         env:
-          CYPRESS_baseUrl: 'https://www.saucedemo.com'
+          CYPRESS_baseUrl: ${{ env.BASE_URL }}
 
   playwright:
     runs-on: ubuntu-latest
@@ -50,7 +53,7 @@ jobs:
       - name: Run Playwright tests
         run: npm run test:playwright:ci
         env:
-          BASE_URL: 'https://www.saucedemo.com'
+          BASE_URL: ${{ env.BASE_URL }}
 
   sonarcloud:
     runs-on: ubuntu-latest
@@ -70,3 +73,18 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  zap-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OWASP ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.10.0
+        with:
+          target: ${{ env.BASE_URL }}
+        continue-on-error: true
+
+      - name: Upload ZAP Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: zap-report
+          path: zap-report.html
