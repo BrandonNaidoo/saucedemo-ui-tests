@@ -93,7 +93,10 @@ saucedemo-ui-tests/
 ├── cypress.config.ts # Cypress configuration
 ├── eslint.config.mjs # ESLint rules (modern format)
 ├── package.json # Project metadata and scripts
+├── playwright.config.ts # Playwright configuration
 ├── README.md # This file
+├── sonar-project.properties # SonarCloud project configuration
+├── tsconfig.json # TypeScript configuration
 ```
 
 ---
