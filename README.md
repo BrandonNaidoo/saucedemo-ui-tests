@@ -12,12 +12,6 @@ Automated UI tests for the SauceDemo application using Cypress and Playwright, w
 
 ---
 
-## 🔐 OWASP ZAP Security Scans
-
-OWASP ZAP is integrated into the GitHub Actions workflow to perform automated security scans against [saucedemo.com](https://www.saucedemo.com). Results are generated with each pipeline run to help identify common web vulnerabilities.
-
----
-
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -26,6 +20,7 @@ OWASP ZAP is integrated into the GitHub Actions workflow to perform automated se
 - [Project Structure](#-project-structure)
 - [Code Quality: ESLint & Prettier](#-code-quality-eslint--prettier)
 - [Continuous Integration](#-continuous-integration)
+- [OWASP ZAP Security Scans](#-owasp-zap-security-scans)
 - [Contributing](#-contributing)
 - [License](#-license)
 
@@ -110,6 +105,12 @@ Make sure to install the corresponding VS Code extensions for automatic linting 
 ## ⚙️ Continuous Integration
 
 - **GitHub Actions** configured to run Cypress tests on push, pull request, and scheduled monthly
+
+---
+
+## 🔐 OWASP ZAP Security Scans
+
+OWASP ZAP is integrated into the GitHub Actions workflow to perform automated security scans against [saucedemo.com](https://www.saucedemo.com). Results are generated with each pipeline run to help identify common web vulnerabilities.
 
 ---
 
