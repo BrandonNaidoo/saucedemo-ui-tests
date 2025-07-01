@@ -10,6 +10,8 @@ Automated UI tests for the SauceDemo application using Cypress and Playwright, w
 | **CircleCI**   | [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/LdsahFmCXeTHzXz4vmYWNf/584bTtEpQZCJ6ncw6t8Jhp/tree/main) |
 | **SonarCloud** | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=BrandonNaidoo_saucedemo-ui-tests&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=BrandonNaidoo_saucedemo-ui-tests)                                    |
 
+---
+
 ## Table of Contents
 
 - [Project Overview](#project-overview)
@@ -18,6 +20,7 @@ Automated UI tests for the SauceDemo application using Cypress and Playwright, w
 - [Project Structure](#-project-structure)
 - [Code Quality: ESLint & Prettier](#-code-quality-eslint--prettier)
 - [Continuous Integration](#-continuous-integration)
+- [OWASP ZAP Security Scans](#-owasp-zap-security-scans)
 - [Contributing](#-contributing)
 - [License](#-license)
 
@@ -79,15 +82,21 @@ npm run test:playwright:ci
 
 ```
 saucedemo-ui-tests/
+├── .circleci/ # CircleCI configuration
+├── .github/ # GitHub workflow configuration
+├── .vscode/ # Editor settings (e.g., format-on-save)
 ├── cypress/ # Cypress tests and support files
+├── playwright.config.ts # Playwright configuration
 ├── pages/ # Page Object Model (POM) classes
 ├── enums/ # User roles or domain enums
 ├── constants/ # Reusable test strings or error messages
-├── .vscode/ # Editor settings (e.g., format-on-save)
 ├── cypress.config.ts # Cypress configuration
 ├── eslint.config.mjs # ESLint rules (modern format)
 ├── package.json # Project metadata and scripts
+├── playwright.config.ts # Playwright configuration
 ├── README.md # This file
+├── sonar-project.properties # SonarCloud project configuration
+├── tsconfig.json # TypeScript configuration
 ```
 
 ---
@@ -101,7 +110,14 @@ Make sure to install the corresponding VS Code extensions for automatic linting 
 
 ## ⚙️ Continuous Integration
 
-- **GitHub Actions** configured to run Cypress tests on push, pull request, and scheduled monthly
+- **GitHub Actions** configured to run Cypress tests, Playwright tests, SonarCloud scan and Owasp Zap scan on push, pull request, and scheduled monthly
+- **Circle CI** configured to run Cypress tests and Playwright tests on push, pull request, and scheduled monthly
+
+---
+
+## 🔐 OWASP ZAP Security Scans
+
+OWASP ZAP is integrated into the GitHub Actions workflow to perform automated security scans against [saucedemo.com](https://www.saucedemo.com). Results are generated with each pipeline run to help identify common web vulnerabilities.
 
 ---
 
